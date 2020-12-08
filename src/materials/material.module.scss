@@ -1,0 +1,78 @@
+@import '~@angular/material/theming';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+$mat-myapp-primary: (50 : #fef6ed,
+100 : #fce8d3,
+200 : #fbd9b5,
+300 : #f9c997,
+400 : #f7be81,
+500 : #f6b26b,
+600 : #f5ab63,
+700 : #f3a258,
+800 : #f2994e,
+900 : #ef8a3c,
+A100 : #ffffff,
+A200 : #ffffff,
+A400 : #ffe7d5,
+A700 : #ffd8bc,
+contrast: (50 : #000000,
+100 : #000000,
+200 : #000000,
+300 : #000000,
+400 : #000000,
+500 : #000000,
+600 : #000000,
+700 : #FFFFFF,
+800 : #FFFFFF,
+900 : #FFFFFF,
+A100 : #FFFFFF,
+A200 : #FFFFFF,
+A400 : #FFFFFF,
+A700 : #FFFFFF,
+));
+
+$mat-myapp-accent: (50 : #f9e0e0,
+100 : #f0b3b3,
+200 : #e68080,
+300 : #db4d4d,
+400 : #d42626,
+500 : #cc0000,
+600 : #c70000,
+700 : #c00000,
+800 : #b90000,
+900 : #ad0000,
+A100 : #ffd7d7,
+A200 : #ffa4a4,
+A400 : #ff7171,
+A700 : #ff5858,
+contrast: (50 : #000000,
+100 : #000000,
+200 : #000000,
+300 : #ffffff,
+400 : #ffffff,
+500 : #ffffff,
+600 : #ffffff,
+700 : #ffffff,
+800 : #ffffff,
+900 : #ffffff,
+A100 : #000000,
+A200 : #000000,
+A400 : #000000,
+A700 : #000000,
+));
+
+button[color="primary"] {
+    span {
+        color: white;
+    }
+
+}
+
+$primary: mat-palette($mat-myapp-primary);
+$accent: mat-palette($mat-myapp-accent);
+
+$theme: mat-light-theme($primary,
+$accent);
+
+@include angular-material-theme($theme);

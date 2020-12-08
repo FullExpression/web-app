@@ -1,0 +1,88 @@
+<context-menu [menuLines]="contextMenuLines"></context-menu>
+<div class="detect-emotion-from-image-component" [class.overflow-hidden]="getReportComponentVisibleState()"
+    fadeInAnimation>
+    <div class="background-image"></div>
+    <div class="detect-emotion-from-image-component-inner">
+        <div class="loading-wrapper" *ngIf="isLoading" fadeInAnimation>
+            <loading [message]="loadingMessage"></loading>
+        </div>
+        <div class="import-image-wrapper" *ngIf="!isLoading && !hasImages" fadeInAnimation>
+            <import-images (importedImagesWithName)="importedImages($event)" [backgroundColor]="'#ffffff40'"
+                [color]="'white'">
+            </import-images>
+        </div>
+        <div class="results">
+            <div class="graphics">
+                <div class="graphics-line radar" [@showRadar]="showRadar">
+                    <radar-chart [configuration]="radarChartModelConfig"></radar-chart>
+                </div>
+                <div class="graphics-line line" [@showLinear]="showLinear">
+                    <pie-chart [configuration]="lineChartModelConfig">
+                    </pie-chart>
+                </div>
+            </div>
+            <div class="search-filters" [@showSearch]="showSearch">
+                <div class="search-input">
+                    <div class="search-icon">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 52.966 52.966"
+                            style="enable-background:new 0 0 52.966 52.966;" xml:space="preserve">
+                            <circle style="fill:#57ABC1;" cx="21.983" cy="21" r="20" />
+                            <line
+                                style="fill:none;stroke:#556080;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;"
+                                x1="35.437" y1="35.798" x2="50.983" y2="51.966" />
+                            <path style="fill:#7CCBD8;" d="M3.002,27.253c0.848,2.582,2.24,5.018,4.167,7.146L35.382,6.186
+                                            	c-2.129-1.928-4.564-3.319-7.146-4.167L3.002,27.253z" />
+                            <path style="fill:#556080;"
+                                d="M21.983,42c-11.58,0-21-9.42-21-21s9.42-21,21-21s21,9.42,21,21S33.562,42,21.983,42z M21.983,2
+                                            	c-10.477,0-19,8.523-19,19s8.523,19,19,19s19-8.523,19-19S32.459,2,21.983,2z" />
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                        </svg>
+                    </div>
+                    <mat-form-field class="example-full-width">
+                        <div class="search-wrapper">
+
+                            <input matInput placeholder="Search by emotion classification or photo name"
+                                (keyup)="this.search($event)">
+
+                        </div>
+
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="images" [@hasImages]="hasImages">
+                <div class="image" *ngFor="let emotionImage of emotionImages"
+                    [ngStyle]="{'background-image':'url(' + emotionImage.imageUrl + ')'}">
+                    <div class="description name">
+                        {{emotionImage.name}}
+                    </div>
+                    <div class="description classification">
+                        <div class="icon">
+                            {{emotionImage.classification.icon}}
+                        </div>
+                        <div class="label">
+                            {{emotionImage.classification.classificationLabel}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
