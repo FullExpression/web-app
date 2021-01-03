@@ -10,6 +10,7 @@
     "src/polyfills.ts"
   ],
   "include": [
+    "node_modules/@fullexpression/emotionclassification",
     "src/**/*.d.ts"
-  ]
+  ],
 }
