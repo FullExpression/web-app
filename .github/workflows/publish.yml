@@ -38,10 +38,7 @@ jobs:
         run: npm run build
       - name: Commit new version
         working-directory: ./
-        run: |
-          git add package.json
-          git commit -m "Update version"
-          git push 
+        run: git push 
   deploy:
     name: Deploy
     needs: build
