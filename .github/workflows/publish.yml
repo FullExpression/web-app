@@ -31,7 +31,9 @@ jobs:
           git config --global user.name "Ricardo Rocha"
       - name: Increase patch version
         working-directory: ./
-        run: npm version patch
+        run: |
+          ls
+          npm version patch
       - name: Build
         run: npm run build
       - name: Commit new version
