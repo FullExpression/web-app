@@ -23,7 +23,7 @@
         "@angular/router": "~11.0.1",
         "@fullexpression/confusion-matrix": "0.0.5",
         "@fullexpression/core": "0.0.1",
-        "@fullexpression/emotion-classification": "0.0.12",
+        "@fullexpression/emotion-classification": "0.0.13",
         "@fullexpression/models": "0.0.5",
         "@types/tracking": "^1.1.29",
         "hammerjs": "^2.0.8",
