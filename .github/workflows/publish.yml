@@ -33,7 +33,7 @@ jobs:
         working-directory: ./
         run: |
           ls -l
-          npm version patch
+          npm version patch --force
       - name: Build
         run: npm run build
       - name: Commit new version
