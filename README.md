@@ -1,27 +1,26 @@
-# WebTools
+# 🧑‍🦰 FullExpression Web App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+FullExpression Web Application allow users to generate, see and interact with emotion recognition.
 
-## Development server
+## 🏷️ Main Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Emotion analysis in real time
 
-## Code scaffolding
+Uses the webcam for capturing real time images and detect potential faces and emotions expressed
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Emotion analysis from images
 
-## Build
+Allows users to generate emotional reports from their own images. The user can interact with the report by searching images, downloading a version of the report in excel format or downloading the images organized by the corresponding emotion classification.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 🏃‍♂️ How to run
 
-## Running unit tests
+1. Run `npm install` in order to install all packages dependencies;
+2. Run `npm start` to run the application in debug mode. Will be created a node service running on http://localhost:4200/.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🚋 CI/CD explanation
 
-## Running end-to-end tests
+*Eventually will have a description*
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## 🏘️Architecture
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+*Eventually will have a description*
