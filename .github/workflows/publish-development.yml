@@ -1,9 +1,9 @@
-name: "publish"
+name: "publish-development"
 
 on:
   push:
     branches:
-      - master
+      - development
 
 jobs:
   build:
