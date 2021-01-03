@@ -7,15 +7,15 @@ on:
 
 jobs:
   build:
-    name: build
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: setup node
+      - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: 14
           registry-url: https://regsitry.npmjs.org
-      - name: setup checkout
+      - name: Setup checkout
         uses: actions/checkout@v2
         with:
           ref: master
@@ -30,14 +30,12 @@ jobs:
           git config --global user.email "ricardo1992rocha@gmail.com"
           git config --global user.name "Ricardo Rocha"
       - name: Increase patch version
-        working-directory: ./projects/emotion-classification
+        working-directory: ./
         run: npm version patch
       - name: Build
         run: npm run build
-      - name: Publish package
-        run: npm publish ./dist/emotion-classification
       - name: Commit new version
-        working-directory: ./projects/emotion-classification
+        working-directory: ./
         run: |
           git add package.json
           git commit -m "Update version"
