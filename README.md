@@ -1,6 +1,6 @@
 # 🧑‍🦰 FullExpression Web App
 
-FullExpression Web Application allow users to generate, see and interact with emotion recognition.
+FullExpression Web Application allow users to generate, see and interact with emotion recognition software.
 
 ## 🏷️ Main Features
 
