@@ -19,12 +19,12 @@ Allows users to generate emotional reports from their own images. The user can i
 
 ## 🚋 CI/CD explanation
 
-*Eventaully will have content here.*
+*Eventually will have content here.*
 
 ## 🏘️Architecture
 
-*Eventaully will have content here.*
+*Eventually will have content here.*
 
-## Troubleshotting
+## Troubleshooting
 
-*Eventaully will have content here.*
+*Eventually will have content here.*
