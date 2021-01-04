@@ -6,7 +6,7 @@ FullExpression Web Application allow users to generate, see and interact with em
 
 ### Emotion analysis in real time
 
-Uses the webcam for capturing real time images and detect potential faces and emotions expressed
+Uses the webcam for capturing real time images and detect potential faces and emotions expressed.
 
 ### Emotion analysis from images
 
@@ -19,8 +19,12 @@ Allows users to generate emotional reports from their own images. The user can i
 
 ## 🚋 CI/CD explanation
 
-*Eventually will have a description*
+*Eventaully will have content here.*
 
 ## 🏘️Architecture
 
-*Eventually will have a description*
+*Eventaully will have content here.*
+
+## Troubleshotting
+
+*Eventaully will have content here.*
